@@ -11,7 +11,28 @@
     <title>To Do List</title>
 </head>
 <body>
-    <h1>Every Thing You Need To Do</h1>
-    
+    <h1>Everything We Need To Do</h1>
+    <h3>Add New Task</h3>
+    <form id="interface">
+        <label>Task Description</label>
+        <input type="text" placeholder="To Do" id="in-task" size="50">
+        <label>When Does it need to be Completed</label>
+        <input type="date" placeholder="Due Date" id="in-due-date" size="12">
+        <button id="btn-add-task">Add To List</button>
+    </form>
+    <h3>Our To Do List</h3>
+    <div id=displayArea>
+    <table>
+        <thead>
+            <tr>
+            <th>Task</th>
+            <th>Completed?</th>
+            </tr>
+        </thead>
+        <tbody id="outTasks">
+            <!-- Database Data displays here -->
+        </tbody>
+    </table>
+    </div>
 </body>
 </html>

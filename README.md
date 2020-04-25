@@ -14,6 +14,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] create database
     [x] Database Table should have a minimum of task Description and Task Completed, 
     [x] I could also include columns for the date that it was created, the date that it needs to be completed and a category for sorting tasks
+[x] server connected
+[] html functionality created
 [] connect to database
 [] create Get Route
     [] create append to DOM
