@@ -1,25 +1,23 @@
-let express = require('express');
-let router = express.Router();
-let pg = require('pg');
+const express = require('express');
+const router = express.Router();
 
-const Pool = pg.Pool;
-const pool = new Pool({
-    database: 'weekend-to-do-app',
-    host: 'localhost',
-    port: 5432,
-    max: 10,
-    idleTimeoutMillis: 30000
-});
+const pool = require('../modules/pool')
 
-pool.on('connect', ()=> {
-    console.log('postgres connected');
-});
-pool.on('error', (error) => {
-    console.log('eror with postgres pool', error); 
-});
 
 //GET Route
-
+router.get('/', (req, res) => {
+    console.log('in /tasks GET');
+    let queryText = 'SELECT * FROM "tasks"';
+    pool.query(queryText)
+        .then((result) => {
+            console.log(result.rows);
+            res.send(result.rows);
+        }).catch((error) => {
+            console.log(error);
+            res.sendStatus(500);  
+        })
+// //comment out this res once working)//         res.send([];
+})
 //POST Route
 
 //Delete Route
