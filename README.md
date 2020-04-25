@@ -8,8 +8,22 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
+[x] set up file tree
+[] set up file dependencies
+    []make sure js and jquery are working
 [] create database
     [] Database Table should have a description of the task, a date the task was created, a date the task needs to be done 
+[] create Get Route
+    [] create append to DOM
+[] create Post Route to add tasks to the database
+[] Create Delete Route to remove tasks from the database
+[] Create Put rout to check off tasks
+    [] include visual representation (maybe a big green checkbox .img)
+    [] needs to be stored in the database so that completed tasks refresh as still completed.
+[] maybe add a favicon
+
+
+
 
 REQs
 * Create a front end experience that allows a user to create a Task.
