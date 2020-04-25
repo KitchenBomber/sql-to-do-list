@@ -48,12 +48,12 @@ function getTasks(){
 }
 
 //POST Route
-function addTask(task){
-console.log('in addTask', task);
+function addTask(newTask){
+console.log('in addTask', newTask);
 $.ajax({
     type: 'POST',
     url: '/tasks',
-    data: task
+    data: newTask
 }).then( function(response){
     console.log('back from POST with:', response);
     getTasks();

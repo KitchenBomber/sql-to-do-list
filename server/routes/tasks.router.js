@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const pool = require('../modules/pool')
+const pool = require('../modules/pool');
 
 
 //GET Route
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         }).catch((error) => {
             console.log(error);
             res.sendStatus(500);
-        })
+        });
     // //comment out this res once working)//         res.send([];
 })
 //POST Route
@@ -23,13 +23,14 @@ router.post('/', (req, res) => {
     let newTask = req.body;
     console.log('POST hit:', newTask);
     let queryText = `INSERT INTO "tasks" ("description", "due")
-    VALUES ($1, $2,);`;
+    VALUES ($1, $2);`
     pool.query(queryText, [newTask.description, newTask.due])
-    .then((result) => {
+    .then(result => {
         res.sendStatus(201);
-    }).catch((error) => {
+    }).catch(error => {
+        console.log(error);
         res.sendStatus(500);
-    })
+    });
 })
 //Delete Route
 
