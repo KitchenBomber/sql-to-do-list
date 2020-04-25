@@ -10,16 +10,27 @@ router.get('/', (req, res) => {
     let queryText = 'SELECT * FROM "tasks"';
     pool.query(queryText)
         .then((result) => {
-            console.log(result.rows);
+            // console.log(result.rows);
             res.send(result.rows);
         }).catch((error) => {
             console.log(error);
-            res.sendStatus(500);  
+            res.sendStatus(500);
         })
-// //comment out this res once working)//         res.send([];
+    // //comment out this res once working)//         res.send([];
 })
 //POST Route
-
+router.post('/', (req, res) => {
+    let newTask = req.body;
+    console.log('POST hit:', newTask);
+    let queryText = `INSERT INTO "tasks" ("description", "due")
+    VALUES ($1, $2,);`;
+    pool.query(queryText, [newTask.description, newTask.due])
+    .then((result) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        res.sendStatus(500);
+    })
+})
 //Delete Route
 
 //Put Route

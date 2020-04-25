@@ -16,10 +16,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] I could also include columns for the date that it was created, the date that it needs to be completed and a category for sorting tasks
 [x] server connected
 [x] html functionality created
-[] click listener for Add Button
-[] connect to database
-[] create Get Route
-    [] create append to DOM
+[x] click listener for Add Button
+[x] connect to database
+[x] create Get Route
+    [x] create append to DOM
     [] new buttons need new clickees
 [] create Post Route to add tasks to the database
 [] Create Delete Route to remove tasks from the database

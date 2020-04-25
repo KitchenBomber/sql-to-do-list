@@ -7,15 +7,14 @@ function onReady (){
     getTasks();
 }
 
-
 function appendToDom(taskArray){
     console.log('in append to DOM with,', taskArray);
     $( '#outTasks').empty();
     for( let task of taskArray ){
     $('#outTasks' ).append(`
     <tr>
-        <td>${ task.task_description }<td>
-        <td>${ task.task_completed }
+        <td>${ task.description }<td>
+        <td>${ task.completed }
             <button class="checkOffButton" data-id=${ task.id }>DONE</button>
         </td>
         <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
@@ -26,13 +25,14 @@ function appendToDom(taskArray){
 function taskClick(event){
     event.preventDefault();
     console.log('you are pushing my button');
-    let newTask = {
-        task: $( '#in-task' ).val(),
-        dueDate: $( '#in-due-date' ).val(),
-    };
+    let newTask = {};
+    newTask.description = $( '#in-task' ).val(),
+    newTask.due = $( '#in-due-date' ).val(),
     console.log(newTask);
-    getTasks(newTask);
+    addTask(newTask);
+    
 }
+
 //GET Route
 function getTasks(){
     $.ajax({
@@ -48,7 +48,22 @@ function getTasks(){
 }
 
 //POST Route
+function addTask(task){
+console.log('in addTask', task);
+$.ajax({
+    type: 'POST',
+    url: '/tasks',
+    data: task
+}).then( function(response){
+    console.log('back from POST with:', response);
+    getTasks();
+} ).catch(function(error){
+    alert( 'error adding task. see console' );
+    console.log(error);
+})
 
+
+}
 //Delete Route
 
 //PUT Route
