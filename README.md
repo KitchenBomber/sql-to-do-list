@@ -9,10 +9,12 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 [x] set up file tree
-[] set up file dependencies
-    []make sure js and jquery are working
-[] create database
-    [] Database Table should have a description of the task, a date the task was created, a date the task needs to be done 
+[x] set up file dependencies
+    [x]make sure js and jquery are working
+[x] create database
+    [x] Database Table should have a minimum of task Description and Task Completed, 
+    [x] I could also include columns for the date that it was created, the date that it needs to be completed and a category for sorting tasks
+[] connect to database
 [] create Get Route
     [] create append to DOM
 [] create Post Route to add tasks to the database
