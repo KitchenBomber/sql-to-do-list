@@ -1,8 +1,11 @@
-# Project Name
+Shared To Do List:
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+This app will allow multiple users to view a shared to-do list.
+<!-- picture of basic list -->
+Any user will be able to add items to the list, remove items from the list or mark list items complete.
+<!-- picture with icons checked off and some previously shown items no longer present -->
 
-## Description
+
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
@@ -27,6 +30,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] include visual representation (maybe a big green checkbox .img)
     [x] needs to be stored in the database so that completed tasks refresh as still completed.
 [] maybe add a favicon
+[] clear fields with submit
+[] put on web
+
 
 
 
