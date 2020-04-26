@@ -23,9 +23,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [] new buttons need new clickees
 [x] create Post Route to add tasks to the database
 [x] Create Delete Route to remove tasks from the database
-[] Create Put rout to check off tasks
-    [] include visual representation (maybe a big green checkbox .img)
-    [] needs to be stored in the database so that completed tasks refresh as still completed.
+[x] Create Put rout to check off tasks
+    [x] include visual representation (maybe a big green checkbox .img)
+    [x] needs to be stored in the database so that completed tasks refresh as still completed.
 [] maybe add a favicon
 
 
