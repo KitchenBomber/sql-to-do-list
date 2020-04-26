@@ -13,6 +13,15 @@ function appendToDom(taskArray){
     console.log('in append to DOM with,', taskArray);
     $( '#outTasks').empty();
     for( let task of taskArray ){
+        let display;
+        if (task.completed === false){
+            display = 'a picture of an empty box'
+        }else if (task.completed === true){
+            display = 'a picture of a checked box'
+        }else {
+            display = task.completed + 'dat'
+        };
+        console.log(display);
     $('#outTasks' ).append(`
     <tr>
         <td>${ task.description }<td>
