@@ -5,6 +5,7 @@ function onReady (){
     console.log('jquery ready');
     $("#btn-add-task").on('click', taskClick);
     $('#outTasks').on('click', '.deleteTaskButton', deleteTask);
+    $('#outTasks').on('click', '.checkOffButton', checkOff);
     getTasks();
 }
 
@@ -16,7 +17,7 @@ function appendToDom(taskArray){
     <tr>
         <td>${ task.description }<td>
         <td>${ task.completed }
-            <button class="checkOffButton" data-id=${ task.id }>DONE</button>
+            <button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed }>DONE</button>
         </td>
         <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
         </tr>`)
@@ -83,4 +84,20 @@ function deleteTask(){
 
 
 //PUT Route
-
+function checkOff(){
+    let id = $(this).data('id');
+    // let status = $(this).data('complete');
+    console.log('in checkOff', id);
+    $.ajax({
+        type: 'PUT',
+        url: `/tasks/${id}`,
+        data:{
+            completed: status
+        }
+    }).then(function(response){
+        getTasks();
+        console.log(response);
+    }).catch(function(error){
+        alert('error in PUT /tasks')
+    })
+}//END PUT

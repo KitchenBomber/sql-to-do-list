@@ -46,5 +46,17 @@ router.delete('/:id', (req, res) => {
 })//END DELETE ROUTE
 
 //Put Route
-
+router.put('/:id', (req, res) => {
+    console.log('in PUT /tasks', req.params.id);
+    // console.log('put body', req.body);
+   let queryString = `UPDATE "tasks" SET "completed" = NOT "completed" where "id" = $1`;
+   pool.query(queryString, [req.params.id])
+    .then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(error);
+        res.sendStatus(500);
+    })
+    // res.send('put this away later')
+})
 module.exports = router;

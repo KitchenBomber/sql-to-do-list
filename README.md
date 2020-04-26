@@ -22,7 +22,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] create append to DOM
     [] new buttons need new clickees
 [x] create Post Route to add tasks to the database
-[] Create Delete Route to remove tasks from the database
+[x] Create Delete Route to remove tasks from the database
 [] Create Put rout to check off tasks
     [] include visual representation (maybe a big green checkbox .img)
     [] needs to be stored in the database so that completed tasks refresh as still completed.
