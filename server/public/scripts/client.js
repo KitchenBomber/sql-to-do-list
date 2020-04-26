@@ -15,19 +15,19 @@ function appendToDom(taskArray) {
     for (let task of taskArray) {
         if (task.completed === false) {
             $('#outTasks').append(`
-                <tr>
+                <tr class="undone">
                 <td>${ task.description}<td>
-                <td><img src="UNCHECKED.png" alt="box">
+                <td><img src="/images/UNCHECKED.png" alt="box">
                     <button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>CHECK</button>
                 </td>
                 <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
                 </tr>`)
         } else if (task.completed === true) {
             $('#outTasks').append(`
-                <tr>
+                <tr class="done">
                 <td>${ task.description}<td>
-                <td><img src="CHECKED.png" alt="box">
-                    <button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>UNCHECK</button>
+                <td><img src="/images/CHECKED.png" alt="box">
+                    <!--<button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>UNCHECK</button>-->
                 </td>
                 <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
                 </tr>`)
