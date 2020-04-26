@@ -18,7 +18,7 @@ function appendToDom(taskArray) {
                 <tr class="undone">
                 <td>${ task.description}<td>
                 <td><img src="/images/UNCHECKED.png" alt="box">
-                    <button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>CHECK</button>
+                    <button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>CHECK OFF</button>
                 </td>
                 <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
                 </tr>`)
@@ -28,6 +28,7 @@ function appendToDom(taskArray) {
                 <td>${ task.description}<td>
                 <td><img src="/images/CHECKED.png" alt="box">
                     <!--<button class="checkOffButton" data-id=${ task.id} data-complete=${task.completed}>UNCHECK</button>-->
+                    <!--This button is commented out, but if re-enabled tasks could be checked and unchecked  -->
                 </td>
                 <td><button class="deleteTaskButton" data-id=${ task.id}>DELETE</button></td>
                 </tr>`)
@@ -59,6 +60,8 @@ function taskClick(event) {
     newTask.description = $('#in-task').val(),
         newTask.due = $('#in-due-date').val(),
         console.log(newTask);
+        $('#in-task').val('');
+        $('#in-due-date').val('');
     addTask(newTask);
 
 }

@@ -1,9 +1,12 @@
 Shared To Do List:
 
-This app will allow multiple users to view a shared to-do list.
-<!-- picture of basic list -->
-Any user will be able to add items to the list, remove items from the list or mark list items complete.
-<!-- picture with icons checked off and some previously shown items no longer present -->
+This app will allow multiple users to view a shared to-do list. Ideal for managing shared responsibilities.
+
+![server/public/images/TODO1.png]
+
+Usera will be able to add items to the list and check them off as well as remove items entirely when they are no longer needed
+![server/public/images/TODO2.png]
+
 
 
 
@@ -23,14 +26,14 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] connect to database
 [x] create Get Route
     [x] create append to DOM
-    [] new buttons need new clickees
+    [x] new buttons need new clickees
 [x] create Post Route to add tasks to the database
 [x] Create Delete Route to remove tasks from the database
 [x] Create Put rout to check off tasks
     [x] include visual representation (maybe a big green checkbox .img)
     [x] needs to be stored in the database so that completed tasks refresh as still completed.
 [] maybe add a favicon
-[] clear fields with submit
+[x] clear fields with submit
 [] put on web
 
 

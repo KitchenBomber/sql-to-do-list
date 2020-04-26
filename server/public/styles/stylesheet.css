@@ -1,0 +1,23 @@
+body {
+    font-family: 'Amatic SC', cursive;
+    background-image: url("linedPaper.jpg");
+    background-repeat: repeat-y;
+    margin-left: 165px;
+    background-color: lightgray;
+}
+#displayArea{
+    font-size: 30px;
+}
+#outTasks{
+    font-size: 30px;
+}
+h3{
+    font-size: 50px;
+}
+
+h1{
+    font-size: 75px;
+}
+#interface {
+    font-size: 25px;
+}

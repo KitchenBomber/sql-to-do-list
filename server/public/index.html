@@ -7,24 +7,22 @@
     <script src="scripts/client.js"></Script>
     <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway&display=swap"
+        rel="stylesheet">
     <title>To Do List</title>
 </head>
 <body>
     <h1>Everything We Need To Do</h1>
-    <h3>Add New Task</h3>
+    <h3>Add New Task:</h3>
     <form id="interface">
         <label>Task Description</label>
-        <input type="text" placeholder="To Do" id="in-task" size="50">
+        <input type="text" placeholder="To Do" id="in-task" size="50"><br>
         <label>When Does it need to be Completed</label>
         <input type="date" placeholder="Due Date" id="in-due-date" size="12">
         <button id="btn-add-task">Add To List</button>
     </form>
-    <h3>Our To Do List</h3>
-    <div id=displayArea>
-    <table>
-        <thead>
-            <tr>
+    <h3>Our To Do List:</h3>
+    <div id=displayArea><table><thead><tr>
             <th>Tasks</th>
             <th></th>
             <th style=> Done?</th>
