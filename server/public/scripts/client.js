@@ -61,7 +61,7 @@ $.ajax({
 } ).catch(function(error){
     alert( 'error adding task. see console' );
     console.log(error);
-})
+})//END POST
 
 
 }
@@ -69,8 +69,17 @@ $.ajax({
 function deleteTask(){
     const myId = $(this).data('id');
     console.log('in deleteTask', myId);
-    
-}
+    $.ajax({
+        type: 'DELETE',
+        url: `/tasks/${myId}`
+    }).then(function(response) {
+        console.log('back from Delete:', response);
+        getTasks();
+    }).catch(function(error){
+        alert('DELETE is busted');
+        console.log(error);      
+    })
+}//END DELETE
 
 
 //PUT Route
