@@ -4,6 +4,7 @@ $(document).ready(onReady);
 function onReady (){
     console.log('jquery ready');
     $("#btn-add-task").on('click', taskClick);
+    $('#outTasks').on('click', '.deleteTaskButton', deleteTask);
     getTasks();
 }
 
@@ -65,6 +66,12 @@ $.ajax({
 
 }
 //Delete Route
+function deleteTask(){
+    const myId = $(this).data('id');
+    console.log('in deleteTask', myId);
+    
+}
+
 
 //PUT Route
 
